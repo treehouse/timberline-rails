@@ -1,0 +1,3 @@
+0.1.0
+  - First public release of Timberline-Rails
+  - Add Rails-specific configuration logic for loading config/timberline.yml
