@@ -11,7 +11,7 @@ in the context of a Rails application.
 ### Configuration
 
 In base Timberline, you have a few options for configuration, from defining a
-`TIMBERLINE\_YAML` constant that points to a yaml config file to defining the
+`TIMBERLINE_YAML` constant that points to a yaml config file to defining the
 configuration in code using `Timberline.configure`. Timberline-Rails adds in
 automatic detection for a config file at `config/timberline.yml` in your Rails
 app, complete with environment support (just like database.yml).
