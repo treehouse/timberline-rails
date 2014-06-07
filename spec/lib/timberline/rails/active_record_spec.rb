@@ -28,10 +28,6 @@ describe Timberline::Rails::ActiveRecord do
     it "sets up a new method at timberline_method_name" do
       expect(subject).to respond_to("timberline_#{method_name}")
     end
-
-    it "replaces the old method with timberline_method_name" do
-      expect(subject.method("timberline_#{method_name}")).to eq(subject.method(method_name))
-    end
   end
 
   describe "calling a delayed method" do
