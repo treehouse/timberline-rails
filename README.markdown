@@ -1,6 +1,7 @@
 # Timberline-Rails
 
 ![](https://travis-ci.org/treehouse/timberline-rails.svg)
+[![Gem Version](https://badge.fury.io/rb/timberline-rails.svg)](http://badge.fury.io/rb/timberline-rails)
 
 ## Purpose
 
