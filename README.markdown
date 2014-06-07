@@ -1,5 +1,7 @@
 # Timberline-Rails
 
+![](https://travis-ci.org/treehouse/timberline-rails.svg)
+
 ## Purpose
 
 Timberline-Rails adds some extra functionality to
