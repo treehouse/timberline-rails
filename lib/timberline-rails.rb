@@ -1,5 +1,8 @@
 require 'timberline'
 require 'timberline/rails/version'
+require 'timberline/rails/exceptions'
+require 'timberline/rails/active_record'
+require 'timberline/rails/active_record_worker'
 
 class Timberline
   # Re-open the Timberline::Config class from Timberline

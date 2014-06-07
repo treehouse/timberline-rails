@@ -19,17 +19,48 @@ configuration in code using `Timberline.configure`. Timberline-Rails adds in
 automatic detection for a config file at `config/timberline.yml` in your Rails
 app, complete with environment support (just like database.yml).
 
+### Timberline::Rails::ActiveRecord and Timberline::Rails::ActiveRecordWorker
+
+In order to make running jobs in the background as easy as possible,
+Timberline-Rails comes with two new items to help:
+
+#### Timberline::Rails::ActiveRecord
+
+This is a module that you can include in your ActiveRecord models to give you
+an easy DSL for marking certain methods to always run in the background.
+
+Example:
+
+    class User < ActiveRecord::Model
+      include Timberline::Rails::ActiveRecord
+      
+      # specify the queue for jobs to run on
+      timberline_queue "user_jobs"
+
+      def send_some_email
+        ...
+      end
+      # Now whenever send_some_email gets called, we put a message onto the "user_jobs" queue
+      # rather than calling the method directly.
+      delay_method :send_some_email
+    end
+
+#### Timberline::Rails::ActiveRecordWorker
+
+This is a worker designed to parse messages put on a queue by Timberline::Rails::ActiveRecord.
+To continue our example from above:
+
+    # run this script with rails/runner or use some other means to load your Rails environment
+    
+    Timberline::Rails::ActiveRecordWorker.new("user_jobs").watch
+
+...and items will be pulled off of the `user_jobs` queue and processed (in this case,
+we'll look up the appropriate User record and call `#send_some_email` on it directly).=
+
 ## Usage
 
 Timberline-Rails works exactly like Timberline; just make sure that you have
 `timberline-rails` listed in your Gemfile and you're good to go.
-
-## TODO
-
-Still to be done:
-
-- **Rails Workers** - implement workers that expect to operate on ActiveRecord objects
-  so you can quickly and easily background tasks in Rails.
 
 ## Contributions
 

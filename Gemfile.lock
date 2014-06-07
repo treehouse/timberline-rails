@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    timberline-rails (0.1.0)
-      timberline (~> 0.6.0)
+    timberline-rails (0.2.0)
+      timberline (~> 0.7.0)
 
 GEM
   remote: http://rubygems.org/
@@ -34,7 +34,7 @@ GEM
       rspec-support (~> 3.0.0)
     rspec-support (3.0.0)
     slop (3.5.0)
-    timberline (0.6.0)
+    timberline (0.7.0)
       daemons
       redis
       redis-expiring-set

@@ -1,3 +1,6 @@
+0.2.0
+  - Add Timberline::Rails::ActiveRecord and Timberline::Rails::ActiveRecordWorker support
+  - Upgrade to Timberline v0.7.0 with Worker support
 0.1.0
   - First public release of Timberline-Rails
   - Add Rails-specific configuration logic for loading config/timberline.yml

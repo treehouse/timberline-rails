@@ -13,5 +13,32 @@ module SpecSupport
     def self.destroy_fake_env
       Object.send(:remove_const, :Rails)
     end
+
+    class FakeModel
+      include Timberline::Rails::ActiveRecord
+
+      timberline_queue "fake_queue"
+
+      def self.primary_key
+        "id"
+      end
+
+      def self.find_by_id(id)
+        FakeModel.new
+      end
+
+      def id
+        1
+      end
+
+      def some_method
+        # left blank
+      end
+      delay_method :some_method
+
+      def some_other_method
+        # left blank
+      end
+    end
   end
 end
