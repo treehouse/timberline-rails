@@ -41,6 +41,7 @@ GEM
       redis-namespace
       trollop
     trollop (2.0)
+    yard (0.8.7.4)
 
 PLATFORMS
   ruby
@@ -50,3 +51,4 @@ DEPENDENCIES
   rake
   rspec (~> 3.0.0)
   timberline-rails!
+  yard

@@ -2,7 +2,12 @@ require 'timberline'
 require 'timberline/rails/version'
 
 class Timberline
+  # Re-open the Timberline::Config class from Timberline
   class Config
+    # Load config/timberline.yml from the Rails root if it exists.
+    # If it doesn't, or if we're somehow not in a Rails application,
+    # just use the default Timberline behavior for instantiating
+    # Config objects.
     def rails_initialize
       if defined? ::Rails
         config_file = File.join(::Rails.root, 'config', 'timberline.yml')
