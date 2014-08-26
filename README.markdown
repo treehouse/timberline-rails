@@ -52,7 +52,7 @@ To continue our example from above:
 
     # run this script with rails/runner or use some other means to load your Rails environment
     
-    Timberline::Rails::ActiveRecordWorker.new("user_jobs").watch
+    Timberline::Rails::ActiveRecordWorker.new.watch("user_jobs")
 
 ...and items will be pulled off of the `user_jobs` queue and processed (in this case,
 we'll look up the appropriate User record and call `#send_some_email` on it directly).=
