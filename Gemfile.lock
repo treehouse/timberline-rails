@@ -7,10 +7,24 @@ PATH
 GEM
   remote: http://rubygems.org/
   specs:
+    activejob (4.2.4)
+      activesupport (= 4.2.4)
+      globalid (>= 0.3.0)
+    activesupport (4.2.4)
+      i18n (~> 0.7)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
+      tzinfo (~> 1.1)
     coderay (1.1.0)
     daemons (1.2.3)
     diff-lcs (1.2.5)
+    globalid (0.3.6)
+      activesupport (>= 4.1.0)
+    i18n (0.7.0)
+    json (1.8.3)
     method_source (0.8.2)
+    minitest (5.8.2)
     pry (0.9.12.6)
       coderay (~> 1.0)
       method_source (~> 0.8)
@@ -34,6 +48,7 @@ GEM
       rspec-support (~> 3.0.0)
     rspec-support (3.0.0)
     slop (3.5.0)
+    thread_safe (0.3.5)
     timberline (0.8.5)
       daemons
       redis
@@ -41,12 +56,15 @@ GEM
       redis-namespace
       trollop
     trollop (2.1.2)
+    tzinfo (1.2.2)
+      thread_safe (~> 0.1)
     yard (0.8.7.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  activejob
   pry
   rake
   rspec (~> 3.0.0)
