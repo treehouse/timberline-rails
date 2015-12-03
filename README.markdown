@@ -19,10 +19,26 @@ configuration in code using `Timberline.configure`. Timberline-Rails adds in
 automatic detection for a config file at `config/timberline.yml` in your Rails
 app, complete with environment support (just like database.yml).
 
-### Timberline::Rails::ActiveRecord and Timberline::Rails::ActiveRecordWorker
+### ActiveJob Integration
+
+Timberline-Rails now includes an adapter and worker so you can use Timberline as
+ActiveJob's queueing backend.
+
+To use, set Timberline as the queue adapter in `config/application.rb` or in one
+of your environment's configs:
+
+    config.active_job.queue_adapter = :timberline
+
+Then, run a worker for each queue that you use.
+
+    # run this script with rails/runner or use some other means to load your Rails environment
+
+    Timberline::Rails::ActiveJobWorker.new.watch("default")
+
+### ActiveRecord Integration
 
 In order to make running jobs in the background as easy as possible,
-Timberline-Rails comes with two new items to help:
+Timberline-Rails comes with two items to help:
 
 #### Timberline::Rails::ActiveRecord
 
