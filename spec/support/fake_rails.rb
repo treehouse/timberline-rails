@@ -1,3 +1,8 @@
+require 'active_job'
+
+ActiveJob::Base.logger = nil
+ActiveJob::Base.queue_adapter = :timberline
+
 module SpecSupport
   module FakeRails
     def self.create_fake_env
@@ -12,6 +17,13 @@ module SpecSupport
 
     def self.destroy_fake_env
       Object.send(:remove_const, :Rails)
+    end
+
+    class FakeJob < ActiveJob::Base
+      queue_as :fake_queue
+
+      def perform(*args)
+      end
     end
 
     class FakeModel
