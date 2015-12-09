@@ -1,7 +1,11 @@
 require 'spec_helper'
 
 describe Timberline::Rails::ActiveRecordWorker do
-  subject { Timberline::Rails::ActiveRecordWorker.new("fake_queue") }
+  subject do
+    Timberline::Rails::ActiveRecordWorker.new.tap do |worker|
+      worker.instance_variable_set :@queue, queue
+    end
+  end
   let(:queue) { Timberline.queue("fake_queue") }
   let(:item) do 
     queue.push({ model_name: "SpecSupport::FakeRails::FakeModel",

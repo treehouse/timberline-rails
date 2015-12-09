@@ -1,3 +1,6 @@
+0.4.0
+  - Upgrade to Timberline v0.8.5
+  - Add ActiveJob adapter and Timberline::Rails::ActiveJobWorker
 0.3.0
   - Upgrade to Timberline v0.8.0
 0.2.0
