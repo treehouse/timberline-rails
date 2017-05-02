@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency "timberline", "~> 0.8.5"
 
-  s.add_development_dependency "activejob"
+  s.add_development_dependency "activejob", '~> 5.0.0'
   s.add_development_dependency "rake"
   s.add_development_dependency "rspec", '~> 3.0.0'
   s.add_development_dependency "pry"

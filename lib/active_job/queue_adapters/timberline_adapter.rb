@@ -4,14 +4,12 @@ module ActiveJob
     #
     #   Rails.application.config.active_job.queue_adapter = :timberline
     class TimberlineAdapter
-      class << self
-        def enqueue(job)
-          Timberline.push job.queue_name, job.serialize
-        end
+      def enqueue(job)
+        Timberline.push job.queue_name, job.serialize
+      end
 
-        def enqueue_at(job, timestamp)
-          raise NotImplementedError
-        end
+      def enqueue_at(job, timestamp)
+        raise NotImplementedError
       end
     end
   end
