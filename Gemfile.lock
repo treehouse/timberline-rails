@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    timberline-rails (0.5.0)
+    timberline-rails (0.5.1)
       timberline (~> 0.8.5)
 
 GEM
