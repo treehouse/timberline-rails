@@ -1,39 +1,38 @@
 PATH
   remote: .
   specs:
-    timberline-rails (0.4.0)
+    timberline-rails (0.5.0)
       timberline (~> 0.8.5)
 
 GEM
   remote: http://rubygems.org/
   specs:
-    activejob (4.2.4)
-      activesupport (= 4.2.4)
-      globalid (>= 0.3.0)
-    activesupport (4.2.4)
+    activejob (5.0.2)
+      activesupport (= 5.0.2)
+      globalid (>= 0.3.6)
+    activesupport (5.0.2)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (~> 0.7)
-      json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
-      thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     coderay (1.1.0)
-    daemons (1.2.3)
+    concurrent-ruby (1.0.5)
+    daemons (1.2.4)
     diff-lcs (1.2.5)
-    globalid (0.3.6)
-      activesupport (>= 4.1.0)
-    i18n (0.7.0)
-    json (1.8.3)
+    globalid (0.4.0)
+      activesupport (>= 4.2.0)
+    i18n (0.8.1)
     method_source (0.8.2)
-    minitest (5.8.2)
+    minitest (5.10.1)
     pry (0.9.12.6)
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
     rake (10.3.2)
-    redis (3.2.2)
+    redis (3.3.3)
     redis-expiring-set (0.1.2)
       redis
-    redis-namespace (1.5.2)
+    redis-namespace (1.5.3)
       redis (~> 3.0, >= 3.0.4)
     rspec (3.0.0)
       rspec-core (~> 3.0.0)
@@ -48,7 +47,7 @@ GEM
       rspec-support (~> 3.0.0)
     rspec-support (3.0.0)
     slop (3.5.0)
-    thread_safe (0.3.5)
+    thread_safe (0.3.6)
     timberline (0.8.5)
       daemons
       redis
@@ -56,7 +55,7 @@ GEM
       redis-namespace
       trollop
     trollop (2.1.2)
-    tzinfo (1.2.2)
+    tzinfo (1.2.3)
       thread_safe (~> 0.1)
     yard (0.8.7.4)
 
@@ -64,7 +63,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activejob
+  activejob (~> 5.0.0)
   pry
   rake
   rspec (~> 3.0.0)
@@ -72,4 +71,4 @@ DEPENDENCIES
   yard
 
 BUNDLED WITH
-   1.10.6
+   1.14.6
