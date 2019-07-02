@@ -58,7 +58,7 @@ GEM
     trollop (2.1.2)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
-    yard (0.9.12)
+    yard (0.9.20)
 
 PLATFORMS
   ruby
